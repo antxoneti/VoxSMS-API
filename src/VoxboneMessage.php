@@ -50,7 +50,7 @@ class Voxbone {//_api?
 	              $data =["from" => $from, "msg" => $fragments[$i], "frag" => $frag, "delivery_report" => $delivery_report];
 	              $postdata = json_encode($data);
 		      $this -> uuid[i] = sendSMSRequest('https://be.sms.voxbone.com:4443/sms/v1/'.$to, $postdata);  
-			  echo "UUID <br>".$this -> uuid[i];
+			
 				}
 	        }else{
 	            $frag = null;
@@ -58,7 +58,7 @@ class Voxbone {//_api?
 	            $postdata = json_encode($data);
 				
 		        $this -> uuid[0] = $this->sendSMSRequest('https://be.sms.voxbone.com:4443/sms/v1/'.$to, $postdata);
-				echo "UUID <br>".$this -> uuid[0];
+				
 		}
 	}
 	function createFragRef(){
